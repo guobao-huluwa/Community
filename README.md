@@ -22,7 +22,7 @@
 [Visual Paradogm](https://www.visual-paradigm.com)
 
 ##脚本
-```sql
+```
 create table USER
 (
 	ID INT default primary key,
@@ -31,6 +31,5 @@ create table USER
 	TOKEN CHAR(36),
 	GMT_CREATE BIGINT,
 	GMT_MODIFIED BIGINT
-)
-;
+);
 ```
