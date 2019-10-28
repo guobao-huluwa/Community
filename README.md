@@ -15,12 +15,16 @@
 
 [Spring官方文档](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
 
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)
 
 ##工具
 [Git](https://git-scm.com/download)
 
 [Visual Paradogm](https://www.visual-paradigm.com)
 
+[flyway](https://flywaydb.org/getstarted/)
+
+[lombok](https://projectlombok.org/)
 ##脚本
 ```
 create table USER
