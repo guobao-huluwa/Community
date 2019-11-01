@@ -1,21 +1,13 @@
 package com.lsg.community.controller;
 
 import com.lsg.community.dto.PaginationDTO;
-import com.lsg.community.dto.QuestionDTO;
-import com.lsg.community.mapper.QuestionMapper;
-import com.lsg.community.mapper.UserMapper;
 import com.lsg.community.model.Question;
-import com.lsg.community.model.User;
 import com.lsg.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 /**
  * 描述

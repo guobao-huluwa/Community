@@ -37,3 +37,7 @@ create table USER
 	GMT_MODIFIED BIGINT
 );
 ```
+```base
+mvn flyway:migreat
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+```

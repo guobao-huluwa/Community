@@ -1,7 +1,6 @@
 package com.lsg.community.controller;
 
 import com.lsg.community.dto.QuestionDTO;
-import com.lsg.community.mapper.QuestionMapper;
 import com.lsg.community.model.Question;
 import com.lsg.community.model.User;
 import com.lsg.community.service.QuestionService;

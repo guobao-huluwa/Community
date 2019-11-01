@@ -1,14 +1,11 @@
 package com.lsg.community.provider;
 
-import com.alibaba.fastjson.JSON;
 import com.lsg.community.dto.AccessTokenDTO;
 import com.lsg.community.dto.GithubUser;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-
-import static org.apache.logging.log4j.message.MapMessage.MapFormat.JSON;
 
 /**
  * 描述
