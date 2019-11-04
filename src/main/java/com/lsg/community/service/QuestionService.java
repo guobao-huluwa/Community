@@ -4,6 +4,7 @@ import com.lsg.community.dto.PaginationDTO;
 import com.lsg.community.dto.QuestionDTO;
 import com.lsg.community.exception.CustomizeErrorCode;
 import com.lsg.community.exception.CustomizeException;
+import com.lsg.community.mapper.QuestionExtMapper;
 import com.lsg.community.mapper.QuestionMapper;
 import com.lsg.community.mapper.UserMapper;
 import com.lsg.community.model.Question;
@@ -28,6 +29,9 @@ public class QuestionService {
 
     @Autowired
     private QuestionMapper questionMapper;
+
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     @Autowired
     private UserMapper userMapper;
@@ -147,5 +151,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
