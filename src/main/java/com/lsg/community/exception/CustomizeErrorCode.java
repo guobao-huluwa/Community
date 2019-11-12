@@ -9,6 +9,7 @@ public enum CustomizeErrorCode implements ICustomizeErrorCode {
     SYS_ERROR(2004,"服务冒烟了，请稍后重试"),
     TYPE_PARAM_WRONG(2005,"评论类型错误或不存在"),
     COMMENT_NOT_FOND(2006,"你回复的的评论不存在，请确认后重试"),
+    CONTENT_IS_ENPTY(2007,"输入内容不可以为空"),
     ;
 
     @Override
