@@ -1,17 +1,21 @@
 package com.lsg.community.controller;
 
 import com.lsg.community.dto.CommentCreateDTO;
+import com.lsg.community.dto.CommentDTO;
 import com.lsg.community.dto.ResultDTO;
+import com.lsg.community.enums.CommentTypeEnum;
 import com.lsg.community.exception.CustomizeErrorCode;
 import com.lsg.community.model.Comment;
 import com.lsg.community.model.User;
 import com.lsg.community.service.CommentService;
 import org.apache.commons.lang3.StringUtils;
+import org.hibernate.validator.constraints.EAN;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 描述
@@ -49,5 +53,11 @@ public class CommentController {
         comment.setLikeCount(0L);
         commentService.insert(comment);
         return ResultDTO.okOf();
+    }
+    @ResponseBody
+    @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
+    public ResultDTO<List> comments(@PathVariable(name = "id") Long id){
+        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+        return ResultDTO.okOf(commentDTOS);
     }
 }
