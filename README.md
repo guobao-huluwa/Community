@@ -38,6 +38,6 @@ create table USER
 );
 ```
 ```base
-mvn flyway:migreat
+mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
