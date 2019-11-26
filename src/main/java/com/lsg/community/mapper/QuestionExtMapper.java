@@ -1,5 +1,6 @@
 package com.lsg.community.mapper;
 
+import com.lsg.community.dto.QuestionQueryDTO;
 import com.lsg.community.model.Question;
 import com.lsg.community.model.QuestionExample;
 import org.apache.ibatis.annotations.Param;
@@ -13,4 +14,9 @@ public interface QuestionExtMapper {
     int incCommentCount(Question record);
 
     List<Question> selectRelated(Question question);
+
+
+    Integer countBySearch(QuestionQueryDTO questionQueryDTO);
+
+    List<Question> selectBySearch(QuestionQueryDTO questionQueryDTO);
 }
