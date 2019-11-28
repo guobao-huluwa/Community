@@ -34,9 +34,10 @@ mvn -v
 - 编译打包  
 mvn compile package
 -    more src/main/resources/application.properties 
+- 复制文件  
 -  cp src/main/resources/application.properties  src/main/resources/application-production.properties 
-- 赋值文件  
-cp  src/main/resources/application-production.properties
+- 修改文件  
+vim  src/main/resources/application-production.properties
 - 启动项目（引用production）  
 java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
 - 检查杀死java进程  
