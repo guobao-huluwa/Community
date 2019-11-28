@@ -38,7 +38,7 @@ mvn compile package
 - 赋值文件  
 cp  src/main/resources/application-production.properties
 - 启动项目（引用production）  
-java -jar -Dspring.profiles:active=production target/community-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
 - 检查杀死java进程  
 ps -aux | grep java
 - 拉取代码  
