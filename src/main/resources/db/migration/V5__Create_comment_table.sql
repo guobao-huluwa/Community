@@ -1,10 +1,10 @@
-CREATE TABLE comment
+create table comment
 (
-    id bigint AUTO_INCREMENT PRIMARY KEY,
-    parent_id bigint NOT NULL,
+    id bigint auto_increment primary key,
+    parent_id bigint not null,
     type int,
-    commentator int NOT NULL,
-    gmt_create bigint NOT NULL,
-    gmt_modified bigint NOT NULL,
-    like_count bigint DEFAULT 0
+    commentator int not null,
+    gmt_create bigint not null,
+    gmt_modified bigint not null,
+    like_count bigint default 0
 );
