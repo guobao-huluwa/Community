@@ -2,7 +2,6 @@ package com.lsg.community.controller;
 
 import com.lsg.community.dto.AccessTokenDTO;
 import com.lsg.community.dto.GithubUser;
-import com.lsg.community.mapper.UserMapper;
 import com.lsg.community.model.User;
 import com.lsg.community.provider.GithubProvider;
 import com.lsg.community.service.UserService;

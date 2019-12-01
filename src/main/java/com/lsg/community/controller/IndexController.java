@@ -1,7 +1,6 @@
 package com.lsg.community.controller;
 
 import com.lsg.community.dto.PaginationDTO;
-import com.lsg.community.model.Question;
 import com.lsg.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

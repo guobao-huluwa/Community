@@ -1,7 +1,6 @@
 package com.lsg.community.dto;
 
 import com.lsg.community.model.User;
-import lombok.Data;
 
 /**
  * 描述
@@ -21,7 +20,7 @@ public class QuestionDTO {
     private  Integer viewCount;
     private  Integer commentCount;
     private  Integer likeCount;
-    private  User user;
+    private User user;
 
     public Long getId() {
         return id;

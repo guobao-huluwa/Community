@@ -1,6 +1,5 @@
 package com.lsg.community.dto;
 
-import com.lsg.community.model.User;
 import lombok.Data;
 
 /**

@@ -7,6 +7,7 @@ import com.lsg.community.exception.CustomizeErrorCode;
 import com.lsg.community.exception.CustomizeException;
 import com.lsg.community.mapper.QuestionExtMapper;
 import com.lsg.community.mapper.QuestionMapper;
+import com.lsg.community.mapper.UserExtMapper;
 import com.lsg.community.mapper.UserMapper;
 import com.lsg.community.model.Question;
 import com.lsg.community.model.QuestionExample;
@@ -40,6 +41,9 @@ public class QuestionService {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private UserExtMapper userExtMapper;
+
     public PaginationDTO list(String search, Integer page, Integer size) {
 
         if (StringUtils.isNotBlank(search)) {
@@ -68,7 +72,7 @@ public class QuestionService {
             page = totalPage;
         }
         paginationDTO.setPageination(totalPage, page);
-        Integer offset = size * (page - 1);
+        Integer offset = page < 1 ? 0 :  size * (page - 1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
         questionQueryDTO.setSize(size);
@@ -77,7 +81,8 @@ public class QuestionService {
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
         for (Question question : questions) {
-            User user = userMapper.selectByPrimaryKey(question.getCreator());
+            User user = userExtMapper.selectByPrimaryKey(question.getCreator());
+
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question, questionDTO);
             questionDTO.setUser(user);
@@ -122,7 +127,7 @@ public class QuestionService {
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
         for (Question question : questions) {
-            User user = userMapper.selectByPrimaryKey(question.getCreator());
+            User user = userExtMapper.selectByPrimaryKey(question.getCreator());
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question, questionDTO);
             questionDTO.setUser(user);
@@ -140,7 +145,7 @@ public class QuestionService {
         }
         QuestionDTO questionDTO = new QuestionDTO();
         BeanUtils.copyProperties(question, questionDTO);
-        User user = userMapper.selectByPrimaryKey(question.getCreator());
+        User user = userExtMapper.selectByPrimaryKey(question.getCreator());
         questionDTO.setUser(user);
 
         return questionDTO;

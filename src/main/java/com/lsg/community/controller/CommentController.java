@@ -9,7 +9,6 @@ import com.lsg.community.model.Comment;
 import com.lsg.community.model.User;
 import com.lsg.community.service.CommentService;
 import org.apache.commons.lang3.StringUtils;
-import org.hibernate.validator.constraints.EAN;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

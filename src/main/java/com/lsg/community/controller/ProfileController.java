@@ -2,7 +2,6 @@ package com.lsg.community.controller;
 
 
 import com.lsg.community.dto.PaginationDTO;
-import com.lsg.community.model.Notification;
 import com.lsg.community.model.User;
 import com.lsg.community.service.NotificationService;
 import com.lsg.community.service.QuestionService;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 /**
  * 描述
